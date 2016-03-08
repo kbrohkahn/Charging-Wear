@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--<color name="brown">#AA6C39</color>--><!--<color name="brown_lighter">#D49A6A</color>--><!--<color name="brown_lightest">#FFD1AA</color>--><!--<color name="brown_darker">#804515</color>--><!--<color name="brown_darkest">#552600</color>-->
+
+	<color name="blue">#2E4272</color>
+	<!--<color name="blue_lighter">#4F618F</color>-->
+	<color name="blue_lightest">#7887AB</color>
+	<!--<color name="blue_darker">#162856</color>-->
+	<color name="blue_darkest">#061539</color>
+	<color name="blue_transparent">#3f2E4272</color>
+
+	<color name="green">#328A2E</color>
+	<!--<color name="green_lighter">#5AAC56</color>-->
+	<color name="green_lightest">#8DCF8A</color>
+	<!--<color name="green_darker">#166711</color>-->
+	<color name="green_darkest">#034500</color>
+
+
+</resources>
