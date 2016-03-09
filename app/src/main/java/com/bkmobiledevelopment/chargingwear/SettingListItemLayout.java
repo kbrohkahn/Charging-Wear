@@ -1,9 +1,6 @@
 package com.bkmobiledevelopment.chargingwear;
 
 import android.content.Context;
-import android.graphics.ColorFilter;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.GradientDrawable;
 import android.support.wearable.view.WearableListView;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -14,12 +11,12 @@ import android.widget.TextView;
  * Created by kbrohkahn on 3/8/2016.
  * Class for layout appearing in list of settings
  */
-public class SettingListItemLayout extends LinearLayout
-		implements WearableListView.OnCenterProximityListener {
+public class SettingListItemLayout extends LinearLayout implements WearableListView.OnCenterProximityListener {
 
 	private ImageView mCircle;
 	private TextView mName;
 
+	private final long mAnimationDuration;
 	private final float mFadedTextAlpha;
 	private final int mFadedCircleColor;
 	private final int mChosenCircleColor;
@@ -32,11 +29,11 @@ public class SettingListItemLayout extends LinearLayout
 		this(context, attrs, 0);
 	}
 
-	public SettingListItemLayout(Context context, AttributeSet attrs,
-			int defStyle) {
+	public SettingListItemLayout(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 
-		mFadedTextAlpha = 50 / 100f;
+		mAnimationDuration = 250;
+		mFadedTextAlpha = .25f;
 		mFadedCircleColor = getResources().getColor(R.color.grey);
 		mChosenCircleColor = getResources().getColor(R.color.blue_darkest);
 	}
@@ -45,21 +42,21 @@ public class SettingListItemLayout extends LinearLayout
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
-		// These are defined in the layout file for list items
-		// (see next section)
 		mCircle = (ImageView) findViewById(R.id.circle);
 		mName = (TextView) findViewById(R.id.name);
 	}
 
 	@Override
 	public void onCenterPosition(boolean animate) {
-		mName.setAlpha(1f);
-		mCircle.getDrawable().setColorFilter(mChosenCircleColor, PorterDuff.Mode.MULTIPLY);
+		mCircle.animate().alpha(1f).setDuration(mAnimationDuration).scaleX(1f).scaleY(1f);
 	}
 
 	@Override
 	public void onNonCenterPosition(boolean animate) {
-		mCircle.getDrawable().setColorFilter(mFadedCircleColor, PorterDuff.Mode.MULTIPLY);
-		mName.setAlpha(mFadedTextAlpha);
+		mCircle.animate()
+				.alpha(mFadedTextAlpha)
+				.setDuration(mAnimationDuration)
+				.scaleX(.75f)
+				.scaleY(.75f);
 	}
 }

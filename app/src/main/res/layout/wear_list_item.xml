@@ -6,9 +6,10 @@
 
 	<ImageView
 		android:id="@+id/circle"
-		android:layout_width="20dp"
-		android:layout_height="20dp"
-		android:layout_margin="16dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="16dp"
+		android:layout_marginEnd="16dp"
 		android:contentDescription="@string/list_item_image"
 		android:src="@drawable/confirmation"/>
 
@@ -16,11 +17,7 @@
 		android:id="@+id/name"
 		android:layout_width="wrap_content"
 		android:layout_height="match_parent"
-		android:layout_marginEnd="16dp"
-		android:layout_marginRight="16dp"
 		android:gravity="center_vertical|start"
-		android:lineSpacingExtra="-4sp"
 		android:textColor="@color/blue_darkest"
 		android:textSize="16sp"/>
 </com.bkmobiledevelopment.chargingwear.SettingListItemLayout>
-
