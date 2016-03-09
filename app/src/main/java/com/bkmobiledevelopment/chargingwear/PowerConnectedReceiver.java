@@ -34,7 +34,7 @@ public class PowerConnectedReceiver extends BroadcastReceiver {
 					blackScreenIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					context.startActivity(blackScreenIntent);
 				}
-			}, 5000);
+			}, 1000);
 		}
 
 		if (bluetooth) {
