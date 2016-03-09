@@ -1,0 +1,15 @@
+<resources>
+	<string name="app_name">Charging Wear</string>
+	<string name="while_charging">While charging&#8230;</string>
+	<string name="list_item_image">Circle confirmation image</string>
+
+	<string name="black_screen_toggle_off">Default watch screen</string>
+	<string name="black_screen_toggle_on">Show black screen</string>
+	<string name="bluetooth_toggle_off">Don\'t change bluetooth</string>
+	<string name="bluetooth_toggle_on">Turn bluetooth off</string>
+
+	<!-- Preference keys -->
+	<string name="black_screen_key">blackScreenCharging</string>
+	<string name="bluetooth_key">bluetoothOffCharging</string>
+
+</resources>
