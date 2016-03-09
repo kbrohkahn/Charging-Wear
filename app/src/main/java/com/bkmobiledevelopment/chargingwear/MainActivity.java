@@ -77,7 +77,7 @@ public class MainActivity extends Activity implements WearableListView.ClickList
 		public WearableListView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 			// Inflate our custom layout for list items
 
-			return new ItemViewHolder(mInflater.inflate(R.layout.wear_list_item, parent));
+			return new ItemViewHolder(mInflater.inflate(R.layout.wear_list_item, null));
 		}
 
 		// Replace the contents of a list item

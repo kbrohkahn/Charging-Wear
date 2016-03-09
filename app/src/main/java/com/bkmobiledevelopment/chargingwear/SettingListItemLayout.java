@@ -1,6 +1,8 @@
 package com.bkmobiledevelopment.chargingwear;
 
 import android.content.Context;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.GradientDrawable;
 import android.support.wearable.view.WearableListView;
 import android.util.AttributeSet;
@@ -52,12 +54,12 @@ public class SettingListItemLayout extends LinearLayout
 	@Override
 	public void onCenterPosition(boolean animate) {
 		mName.setAlpha(1f);
-		((GradientDrawable) mCircle.getDrawable()).setColor(mChosenCircleColor);
+		mCircle.getDrawable().setColorFilter(mChosenCircleColor, PorterDuff.Mode.MULTIPLY);
 	}
 
 	@Override
 	public void onNonCenterPosition(boolean animate) {
-		((GradientDrawable) mCircle.getDrawable()).setColor(mFadedCircleColor);
+		mCircle.getDrawable().setColorFilter(mFadedCircleColor, PorterDuff.Mode.MULTIPLY);
 		mName.setAlpha(mFadedTextAlpha);
 	}
 }
