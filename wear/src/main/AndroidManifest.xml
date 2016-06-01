@@ -5,11 +5,11 @@
 	android:versionCode="5"
 	android:versionName="1.0.4">
 
-	<uses-feature android:name="android.hardware.type.watch"/>
-
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
 	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 	<uses-permission android:name="android.permission.BLUETOOTH"/>
+
+	<uses-feature android:name="android.hardware.type.watch"/>
 
 	<application
 		android:allowBackup="true"

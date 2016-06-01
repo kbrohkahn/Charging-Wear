@@ -2,10 +2,8 @@
 <manifest
 	package="com.bkmobiledevelopment.chargingwear"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:versionCode="5"
-	android:versionName="1.0.4">
-
-	<uses-feature android:name="android.hardware.type.watch"/>
+	android:versionCode="6"
+	android:versionName="1.0.5">
 
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
 	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
