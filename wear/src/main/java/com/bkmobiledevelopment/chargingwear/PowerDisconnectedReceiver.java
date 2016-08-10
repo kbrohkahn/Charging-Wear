@@ -22,6 +22,7 @@ public class PowerDisconnectedReceiver extends BroadcastReceiver {
 		boolean bluetooth = preferences.getBoolean(resources.getString(R.string.bluetooth_key),
 				true);
 
+
 		if (bluetooth) {
 			BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 			if (!mBluetoothAdapter.isEnabled()) {

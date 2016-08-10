@@ -8,12 +8,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.wearable.view.WearableListView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements WearableListView.ClickListener {
@@ -22,6 +20,7 @@ public class MainActivity extends Activity implements WearableListView.ClickList
 			"Show black screen",
 			"Disable bluetooth"};
 	public static boolean[] listItemValues = {false, true, true};
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
