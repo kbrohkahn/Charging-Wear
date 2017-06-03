@@ -25,7 +25,7 @@ public class PowerDisconnectedReceiver extends BroadcastReceiver {
 
 		if (bluetooth) {
 			BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-			if (!mBluetoothAdapter.isEnabled()) {
+			if (mBluetoothAdapter != null && !mBluetoothAdapter.isEnabled()) {
 				mBluetoothAdapter.enable();
 			}
 		}

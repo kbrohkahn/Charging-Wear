@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-	package="com.bkmobiledevelopment.chargingwear"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:versionCode="5"
-	android:versionName="1.0.4">
+	package="com.bkmobiledevelopment.chargingwear"
+	android:versionCode="252000001"
+	android:versionName="2.0.0">
 
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
 	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 	<uses-permission android:name="android.permission.BLUETOOTH"/>
 
 	<uses-feature android:name="android.hardware.type.watch"/>
+
+	<meta-data
+		android:name="com.google.android.wearable.standalone"
+		android:value="true"/>
 
 	<application
 		android:allowBackup="true"
